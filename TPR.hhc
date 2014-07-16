@@ -1,0 +1,411 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<OBJECT type="text/site properties">
+	<param name="ImageType" value="Folder">
+</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="前言">
+		<param name="Local" value="00_intro.htm">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="前言">
+			<param name="Local" value="00_intro2.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="1游戏说明">
+		<param name="Local" value="01_help00.htm">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="1.1回合制、难度、周目系统">
+			<param name="Local" value="01_help01.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="1.2建立人物与升级相关">
+			<param name="Local" value="01_help02.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="1.3游戏操作及快捷键">
+			<param name="Local" value="01_help03.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="1.4天赋系统">
+			<param name="Local" value="01_help04.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="1.5武功学习和使用">
+			<param name="Local" value="01_help05.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="1.6蓄气系统">
+			<param name="Local" value="01_help06.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="1.7装备打造系统">
+			<param name="Local" value="01_help07.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="1.8医疗、攻击、伤害计算">
+			<param name="Local" value="01_help08.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="1.9阵法和战场支援">
+			<param name="Local" value="01_help09.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="1.10新人指南">
+			<param name="Local" value="01_help10.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="1.11负面状态介绍">
+			<param name="Local" value="01_help11.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="1.12内置修改功能">
+			<param name="Local" value="01_help12.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="2心得与数据库">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="2.1战略分析">
+			<param name="Local" value="02_stat01.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="2.2常用战术介绍">
+			<param name="Local" value="02_stat02.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="2.3战场控制">
+			<param name="Local" value="02_stat03.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="2.4各地贩卖物品">
+			<param name="Local" value="02_stat04.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="2.5上侠客岛名单">
+			<param name="Local" value="02_stat05.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="2.6开局扫图">
+			<param name="Local" value="02_stat06.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="2.7浅谈秘籍中的中流砥柱">
+			<param name="Local" value="02_stat07.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3天书剧情">
+		<param name="Local" value="03_story00.htm">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="3.0主角剧情">
+			<param name="Local" value="03_story00zj.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="3.1飞雪">
+			<param name="Local" value="03_story01FX0.htm">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="3.1A郎剑秋线">
+				<param name="Local" value="03_story01FXA.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="3.1B程灵素线">
+				<param name="Local" value="03_story01FXB.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="3.1飞雪洗武功">
+				<param name="Local" value="03_story01FXX.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="3.3连城诀">
+			<param name="Local" value="03_story03L0.htm">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="3.3连城诀主线">
+				<param name="Local" value="03_story03L1.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="3.3A凌霜华线">
+				<param name="Local" value="03_story03LA.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="3.3B水笙线">
+				<param name="Local" value="03_story03LB.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="3.3C戚芳线">
+				<param name="Local" value="03_story03LC.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="3.3连城诀洗武功">
+				<param name="Local" value="03_story03LX.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="3.4天龙八部">
+			<param name="Local" value="03_story04T0.htm">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="3.4.1大理风云">
+				<param name="Local" value="03_story04T1.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="3.4.2五凤驸马">
+				<param name="Local" value="03_story04T2.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="3.4.3逍遥御风">
+				<param name="Local" value="03_story04T3.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="3.4.4英雄再会">
+				<param name="Local" value="03_story04T4_0.htm">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="3.4.4A不杀乔">
+					<param name="Local" value="03_story04T4_A.htm">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="3.4.4B杀乔">
+					<param name="Local" value="03_story04T4_B.htm">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="3.4天龙洗武功">
+				<param name="Local" value="03_story04TX.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="3.5射雕英雄传">
+			<param name="Local" value="03_story05S0.htm">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="3.5射雕主线">
+				<param name="Local" value="03_story05S1.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="3.5A韩小莹线">
+				<param name="Local" value="03_story05SA.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="3.5B梅若华线">
+				<param name="Local" value="03_story05SB.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="3.5射雕洗武功">
+				<param name="Local" value="03_story05SX.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="3.6白马啸西风">
+			<param name="Local" value="03_story06B0.htm">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="3.6A阿曼线">
+				<param name="Local" value="03_story06BA.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="3.6B李文秀线">
+				<param name="Local" value="03_story06BB.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="3.6白马洗武功">
+				<param name="Local" value="03_story06BX.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="3.7鹿鼎记">
+			<param name="Local" value="03_story07L0.htm">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="3.7鹿鼎记主线">
+				<param name="Local" value="03_story07L1.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="3.7A神龙教线">
+				<param name="Local" value="03_story07LA.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="3.7B天地会线">
+				<param name="Local" value="03_story07LB.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="3.7鹿鼎记洗武功">
+				<param name="Local" value="03_story07LX.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="3.8笑傲江湖">
+			<param name="Local" value="03_story08X0.htm">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="3.8A日月线">
+				<param name="Local" value="03_story08XA.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="3.8B五岳线">
+				<param name="Local" value="03_story08XB.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="3.8笑傲洗武功">
+				<param name="Local" value="03_story08XX.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="3.9书剑恩仇录">
+			<param name="Local" value="03_story09S0.htm">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="3.9A李沅芷线">
+				<param name="Local" value="03_story09SA.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="3.9B霍青桐线">
+				<param name="Local" value="03_story09SB.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="3.9书剑洗武功">
+				<param name="Local" value="03_story09SX.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="3.10神雕侠侣">
+			<param name="Local" value="03_story10S0.htm">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="3.10A龙女线">
+				<param name="Local" value="03_story10SA.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="3.10B杨龙线">
+				<param name="Local" value="03_story10SB.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="3.10神雕洗武功">
+				<param name="Local" value="03_story10SX.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="3.11侠客行">
+			<param name="Local" value="03_story11X0.htm">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="3.11A白绣线">
+				<param name="Local" value="03_story11XA.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="3.11B叮当线">
+				<param name="Local" value="03_story11XB.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="3.11侠客行洗武功">
+				<param name="Local" value="03_story11XX.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="3.12倚天屠龙记">
+			<param name="Local" value="03_story12Y0.htm">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="3.12A武当线">
+				<param name="Local" value="03_story12YA.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="3.12B明教线">
+				<param name="Local" value="03_story12YB.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="3.12C蒙古线">
+				<param name="Local" value="03_story12YC.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="3.12倚天洗武功">
+				<param name="Local" value="03_story12YX.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="3.13碧血剑">
+			<param name="Local" value="03_story13B0.htm">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="3.13碧血主线">
+				<param name="Local" value="03_story13B1.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="3.13A夏青青线">
+				<param name="Local" value="03_story13BA.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="3.13B阿九线">
+				<param name="Local" value="03_story13BB.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="3.13碧血剑洗武功">
+				<param name="Local" value="03_story13BX.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="3.14鸳鸯刀">
+			<param name="Local" value="03_story14Y0.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="3.15越女剑">
+			<param name="Local" value="03_story15N0.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="洗武功统计">
+		<param name="Local" value="04_00WG.htm">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="4.1主角洗武功">
+			<param name="Local" value="04_01zj.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="4.2语嫣洗武功">
+			<param name="Local" value="04_02wyy.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="4.3临时队友洗武功">
+			<param name="Local" value="04_03LSdy.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="CHM说明">
+		<param name="Local" value="08_Edit.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="更新Log">
+		<param name="Local" value="08_Log.htm">
+		</OBJECT>
+</UL>
+</BODY></HTML>

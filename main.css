@@ -1,0 +1,175 @@
+A:link {text-decoration: none; color:#09F;}
+A:visited {text-decoration: none; color:#09F;}
+A:active {text-decoration: none; color:#F0C;}
+A:hover {text-decoration: underline; color:#F63;}
+
+body {
+	font-size:16px;
+	font-family:"宋体";
+	line-height:20px;
+	
+}
+
+.titlecss {
+	font-family:"黑体";
+	font:bold;
+	font-size:24px;
+}
+
+.aaa {
+	font-size:14px;
+}
+
+.aaa1 {
+	font-size:14px;
+	color:#39F;
+}
+
+.aaa2 {
+	font-size:14px;
+	color:#663;
+}
+.aaNeiGong {
+	font-family:"微软雅黑";
+	font:bold;
+	font-size:16px;
+	color:#9CF;
+}
+
+.aaQingGong {
+	font-family:"微软雅黑";
+	font:bold;
+	font-size:16px;
+	color:#666;
+}
+
+.aaQuanZhang {
+	font-family:"微软雅黑";
+	font:bold;
+	font-size:16px;
+	color:#F00;
+}
+
+.aaYuJian {
+	font-family:"微软雅黑";
+	font:bold;
+	font-size:16px;
+	color:#CC0;
+}
+
+.aaBingQi {
+	font-family:"微软雅黑";
+	font-size:16px;
+	font:bold;
+	color:#3C0;
+}
+
+.aaZhiTui {
+	font-family:"微软雅黑";
+	font:bold;
+	font-size:16px;
+	color:#39F;
+}
+
+.aaAnDu {
+	font-family:"微软雅黑";
+	font:bold;
+	font-size:16px;
+	color:#90F;
+}
+
+.abEat {
+	font-family:"微软雅黑";
+	font:bold;
+	font-size:16px;
+	color:#0C9;
+}
+
+.abZhuangBei {
+	font-family:"微软雅黑";
+	font:bold;
+	font-size:16px;
+	color:#900;
+}
+
+.abImportant {
+	font-family:"微软雅黑";
+	font:bold;
+	font-size:16px;
+	color:#F6C;
+}
+
+.abQiTa {
+	font-family:"微软雅黑";
+	font:bold;
+	font-size:16px;
+	color:#F99;
+}
+
+.aaTianFu {
+	font-family:"微软雅黑";
+	font:bold;
+	font-size:16px;
+	color:#F60;
+}
+
+.bstress {
+	font:bold;
+	font-size:17px;
+}
+
+.bstressred {
+	font:bold;
+	font-size:16px;
+	color:#F00;
+}
+
+.bstressredd {
+	font:bold;
+	font-size:12px;
+	color:#F00;
+}
+
+.bname {
+	color:#F3F;
+}
+
+.bplace {
+	font:bold;
+	color:#F00;
+}
+
+.acstatchange {
+	font:bold;
+	color:#66C;
+}
+
+.acombat {
+	text-decoration:underline;
+	font:bold;
+}
+
+.abTianShu {
+	font-family:"微软雅黑";
+	font:bold;
+	font-size:16px;
+	color:#C90;
+}
+
+.acRuDui {
+	font:bold;
+	color:#639;
+}
+
+.tooltip {
+	position: absolute;
+	overflow: hidden;
+	border: 1px solid #CCCCCC;
+	background-color: #F9f9f9;
+	padding: 5px;
+	max-width: 200px;
+	opacity: 0.9;
+	font-family: "微软雅黑";
+	font-size: small;
+	text-align: left;
+}
