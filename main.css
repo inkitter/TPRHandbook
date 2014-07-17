@@ -29,49 +29,57 @@ body {
 	font-size:14px;
 	color:#663;
 }
-.aaNeiGong {
+
+.aaNeiGong ,
+.abNeiGong {
 	font-family:"微软雅黑";
 	font:bold;
 	font-size:16px;
 	color:#9CF;
 }
 
-.aaQingGong {
+.aaQingGong,
+.abQingGong {
 	font-family:"微软雅黑";
 	font:bold;
 	font-size:16px;
 	color:#666;
 }
 
-.aaQuanZhang {
+.aaQuanZhang,
+.abQuanZhang {
 	font-family:"微软雅黑";
 	font:bold;
 	font-size:16px;
 	color:#F00;
 }
 
-.aaYuJian {
+.aaYuJian,
+.abYuJian {
 	font-family:"微软雅黑";
 	font:bold;
 	font-size:16px;
 	color:#CC0;
 }
 
-.aaBingQi {
+.aaBingQi ,
+.abBingQi {
 	font-family:"微软雅黑";
 	font-size:16px;
 	font:bold;
 	color:#3C0;
 }
 
-.aaZhiTui {
+.aaZhiTui,
+.abZhiTui {
 	font-family:"微软雅黑";
 	font:bold;
 	font-size:16px;
 	color:#39F;
 }
 
-.aaAnDu {
+.aaAnDu,
+.abAnDu {
 	font-family:"微软雅黑";
 	font:bold;
 	font-size:16px;
@@ -165,11 +173,15 @@ body {
 	position: absolute;
 	overflow: hidden;
 	border: 1px solid #CCCCCC;
-	background-color: #F9f9f9;
+	background-color: #C1FFFC;
 	padding: 5px;
-	max-width: 200px;
+	max-width: 300px;
 	opacity: 0.9;
 	font-family: "微软雅黑";
-	font-size: small;
+	font-size: 10px;
 	text-align: left;
+	overflow-y: visible;
+	overflow-x: visible;
+	min-width: 150px;
+	line-height:14px;
 }

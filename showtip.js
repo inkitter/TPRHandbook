@@ -1,15 +1,17 @@
-function len(s) { return s.length }
-function left(s, n) { return s.substr(0, n) }
-function right(s, n) { return s.substr(-n) }
-function mid(s, n, m) { return s.substr(n+1, m) }
-function instr(s, find) { return s.indexOf(find) + 1 }
+//function len(s) { return s.length }
+//function left(s, n) { return s.substr(0, n) }
+//function right(s, n) { return s.substr(-n) }
+//function mid(s, n, m) { return s.substr(n+1, m) }
+//function instr(s, find) { return s.indexOf(find) + 1 }
 
-if (typeof(jQuery)=="undefined"){
+if (typeof(jQuery)=="undefined")
+{
     var eleM=document.createElement("script");	
     eleM.type = "text/javascript";
     eleM.src = "/jquery.js";
     pageHeader.appendChild(eleM);
-}	//判断jQuery是否加载
+}	
+//判断jQuery是否加载
 
 {
 var boarddiv = "<div class=tooltip id=tooltipwindow>loading..</div>"; 
@@ -17,7 +19,9 @@ $(window).load(function(){
 	$(document.body).append(boarddiv); 
 });
 $("#tooltipwindow").hide();
-}	//创建Div并隐藏
+}	
+//创建Div并隐藏
+
 
 $(document).ready(
 	function()
@@ -27,44 +31,51 @@ $(document).ready(
 			{
 				var sname=event.srcElement.innerText;
 				var stype=event.srcElement.className;
+				
 				if (sname.substr(0)=="[", sname.substr(sname.length-1)=="]")
 				{
 					sname=cutstr(sname,"[","]");
 				}
-				$("#tooltipwindow").css({top:e.pageY+5,left:e.pageX+15}).show();		//移入显示提示
-				floadtxt(sname,stype);
-			}
+				//判断有无[]并获取内容
+				
+				floadtxt(sname,stype);		
+				
+				if  (e.clientX+300>window.innerWidth)
+				{
+					$("#tooltipwindow").css({left:e.clientX-$("#tooltipwindow").width()-20});
+				}
+				else
+				{
+					$("#tooltipwindow").css({left:e.clientX+5});
+				}
+				if  (e.clientY+$("#tooltipwindow").height()>window.innerHeight)
+				{
+					$("#tooltipwindow").css({top:e.pageY-$("#tooltipwindow").height()-20});
+				}
+				else
+				{
+					$("#tooltipwindow").css({top:e.pageY+5});
+				}
+				//防止弹出框超出窗口
+				
+			}//鼠标移动查询并显示
 		)
 		$("span").mouseout(	
 			function()
 			{
 				$("#tooltipwindow").hide();
 				$("#tooltipwindow").html("");
-			}		//移出隐藏提示
+			}		//鼠标移出隐藏提示
 		)
 	}
 )
 
-function fshowtipwin(sname,stype)		//显示提示框
-{
-	var e=event||window.event;
-	var tip=document.getElementById("tooltipwindow"); 
-	tip.style.top=e.clientY;
-	tip.style.left=e.clientX+10;
-	tip.style.visibility = "visible";
-	//显示提示框并根据鼠标移动
-	
-	//if (!sname){sname="null";}
-	//判断参数是否为空
-	
-	floadtxt(sname,stype);	//调用读取数据库
-}
 
 function floadtxt(sname,stype)		//读取数据库
 {
 	var sout="";
-	var typefile="json";
-	var filepath="./";
+	var typefile="";
+	var filepath="";
 	switch (stype)
 	{
 		case "abEat":
@@ -73,56 +84,41 @@ function floadtxt(sname,stype)		//读取数据库
 			break;
 		}
 		case "abZhuangBei":
-		{
-			typefile=filepath+"json_zhuangbei.json";
-			break;
-		}
 		case "abImportant":
 		{
 			typefile=filepath+"json_zhuangbei.json";
 			break;
 		}
 		case "aaNeiGong":
-		{
-			typefile=filepath+"json_wugong.json";
-			break;
-		}
 		case "aaQingGong":
-		{
-			typefile=filepath+"json_wugong.json";
-			break;
-		}
 		case "aaQuanZhang":
-		{
-			typefile=filepath+"json_wugong.json";
-			break;
-		}
 		case "aaYuJian":
-		{
-			typefile=filepath+"json_wugong.json";
-			break;
-		}
 		case "aaBingQi":
-		{
-			typefile=filepath+"json_wugong.json";
-			break;
-		}
 		case "aaZhiTui":
-		{
-			typefile=filepath+"json_wugong.json";
-			break;
-		}
 		case "aaAnDu":
 		{
 			typefile=filepath+"json_wugong.json";
 			break;
 		}
-		default:
+		case "abNeiGong":
+		case "abQingGong":
+		case "abQuanZhang":
+		case "abYuJian":
+		case "abBingQi":
+		case "abZhiTui":
+		case "abAnDu":
 		{
-			typefile=filepath+"json_wugong.json";
-			sout="nofile";
+			typefile=filepath+"json_miji.json";
 			break;
 		}
+		default:
+		{
+			typefile=filepath+"json_zhuangbei.json";
+			sout="";
+			break;
+		}
+		//根据类型定义文件
+		
 	}
 	$.getJSON(typefile,function(sdata){
 		$.each(sdata,function(k,v){
@@ -132,7 +128,7 @@ function floadtxt(sname,stype)		//读取数据库
 						$.each(v,function(kkk,vvv){
 							if (vvv != 0)
 							{
-								if (vvv !="")
+								if (vvv !="")			//判断项目是否控制，若空就不显示在提示里
 								{
 									sout = sout+ kkk+": <span class=&quot"+stype+"&quot>"+vvv+"</span>"+"<br/>";
 								}
@@ -140,40 +136,24 @@ function floadtxt(sname,stype)		//读取数据库
 						})
 					}
 			})
-		})
-		if (!sout)
-			{
-				sout="nodata";
-			}
+		})				//历遍查找
+		if (sout=="")
+		{
+			$("#tooltipwindow").html("查询："+sname+"<br/>"+"未找到");
+			$("#tooltipwindow").show();
+			//$("#tooltipwindow").hide();
+		}		//未找到显示提示或隐藏提示
 		else
-			{
-				$("#tooltipwindow").show();
-			}
-		//sout = "file:" + typefile + "(" + stype + ")" + "<br/>" + sout;
-		$("#tooltipwindow").html(sout);
+		{
+			$("#tooltipwindow").html("查询："+sname+"<br/>"+sout);
+			$("#tooltipwindow").show();
+		}		//找到数据显示提示
 		},
 		function(json)
 		{
-		}
+		}		//getJSON结束return F
 	)
-	
 	sout="";
-
-}
-
-
-function ftiptxt(tiptxt)	//在提示框显示内容
-{
-	//var showt=tiptxt.物品名称+tiptxt.序号;
-	$("#tooltipwindow").html(tiptxt);
-}
-
-
-
-function fhidetip()			//隐藏提示框
-{
-	var tip=document.getElementById("tooltipwindow");  
-	tip.style.visibility = "hidden";
 }
 
 function cutstr(text,start,end)
