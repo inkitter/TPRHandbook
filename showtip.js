@@ -13,13 +13,17 @@ if (typeof(jQuery)=="undefined")
 }	
 //判断jQuery是否加载
 
-{
+
 var boarddiv = "<div class=tooltip id=tooltipwindow>loading..</div>"; 
+var gtip="<div class=gtip2 id=gtw>ggg</div>"; 
 $(window).load(function(){
 	$(document.body).append(boarddiv); 
+	$(document.body).append(gtip); 
+	$("#gtw").load("00_index.htm #sddm");
+
 });
 $("#tooltipwindow").hide();
-}	
+
 //创建Div并隐藏
 
 
@@ -37,7 +41,6 @@ $(document).ready(
 					sname=cutstr(sname,"[","]");
 				}
 				//判断有无[]并获取内容
-				
 				floadtxt(sname,stype);		
 				
 				if  (e.clientX+300>window.innerWidth)
@@ -76,6 +79,7 @@ function floadtxt(sname,stype)		//读取数据库
 	var sout="";
 	var typefile="";
 	var filepath="";
+	filepath="";
 	switch (stype)
 	{
 		case "abEat":
@@ -84,7 +88,7 @@ function floadtxt(sname,stype)		//读取数据库
 			break;
 		}
 		case "abZhuangBei":
-		case "abImportant":
+//		case "abImportant":
 		{
 			typefile=filepath+"json_zhuangbei.json";
 			break;
@@ -114,46 +118,40 @@ function floadtxt(sname,stype)		//读取数据库
 		default:
 		{
 			typefile=filepath+"json_zhuangbei.json";
-			sout="";
+			sout="notype";
 			break;
 		}
 		//根据类型定义文件
 		
 	}
-	$.getJSON(typefile,function(sdata){
-		$.each(sdata,function(k,v){
-			$.each(v,function(kk,vv){
-				if (vv==sname)
-					{
-						$.each(v,function(kkk,vvv){
-							if (vvv != 0)
-							{
-								if (vvv !="")			//判断项目是否控制，若空就不显示在提示里
-								{
-									sout = sout+ kkk+": <span class=&quot"+stype+"&quot>"+vvv+"</span>"+"<br/>";
-								}
-							}
-						})
-					}
-			})
-		})				//历遍查找
-		if (sout=="")
-		{
-			$("#tooltipwindow").html("查询："+sname+"<br/>"+"未找到");
-			$("#tooltipwindow").show();
-			//$("#tooltipwindow").hide();
-		}		//未找到显示提示或隐藏提示
-		else
-		{
+$(document).ready(function() { 
+	$.getJSON(typefile)
+		.done(function(sdata){
+			$.each(sdata,function(k,v){
+				$.each(v,function(kk,vv){
+					if (vv==sname){$.each(v,function(kkk,vvv){if (vvv != 0)		if (vvv !="")		sout = sout+ kkk+": <span class=&quot"+stype+"&quot>"+vvv+"</span>"+"<br/>";	})	}
+				})
+			})				//历遍查找
+
+			if (sout=="")
+			{
+				$("#tooltipwindow").html("查询："+sname+"<br/>"+"未找到");
+				$("#tooltipwindow").show();
+				//$("#tooltipwindow").hide();
+			}		//未找到显示提示或隐藏提示
+			else
+			{
+				$("#tooltipwindow").html("查询："+sname+"<br/>"+sout);
+				$("#tooltipwindow").show();
+			}		//找到数据显示提示
+			if (sout=="notype") $("#tooltipwindow").hide();
+		})
+		.fail(function(){
+			sout=sout+"查询失败";
 			$("#tooltipwindow").html("查询："+sname+"<br/>"+sout);
 			$("#tooltipwindow").show();
-		}		//找到数据显示提示
-		},
-		function(json)
-		{
-		}		//getJSON结束return F
-	)
-	sout="";
+		})
+})
 }
 
 function cutstr(text,start,end)
@@ -172,3 +170,46 @@ function cutstr(text,start,end)
 	else result = '';
 	return result;
 }
+
+var timeout         = 500;
+var closetimer		= 0;
+var ddmenuitem      = 0;
+
+// open hidden layer
+function mopen(id)
+{	
+	// cancel close timer
+	mcancelclosetime();
+
+	// close old layer
+	if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+
+	// get new layer and show it
+	ddmenuitem = document.getElementById(id);
+	ddmenuitem.style.visibility = 'visible';
+
+}
+// close showed layer
+function mclose()
+{
+	if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+}
+
+// go close timer
+function mclosetime()
+{
+	closetimer = window.setTimeout(mclose, timeout);
+}
+
+// cancel close timer
+function mcancelclosetime()
+{
+	if(closetimer)
+	{
+		window.clearTimeout(closetimer);
+		closetimer = null;
+	}
+}
+
+// close layer when click-out
+document.onclick = mclose; 

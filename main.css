@@ -179,9 +179,81 @@ body {
 	opacity: 0.9;
 	font-family: "微软雅黑";
 	font-size: 10px;
-	text-align: left;
+	text-align: left;s
 	overflow-y: visible;
 	overflow-x: visible;
 	min-width: 150px;
 	line-height:14px;
 }
+
+.gtip2 {
+	position: fixed;
+	font-size: 12px;
+	height:14px;
+	width:100%;
+	left:0px;
+	top:0px;
+	opacity: 0.8;
+}
+
+#sddm
+{
+	margin: 0 auto;
+	padding: 0;
+	z-index: 30;
+	height: 14px;
+	position:fixed;
+}
+
+#sddm li
+{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	float: left;
+	font: bold 12px arial;
+	height: 14px;
+	}
+
+#sddm li a
+{	display: block;
+	margin: 0 0px 0 0;
+	padding: 4px 10px;
+	width: auto;
+	background: #5970B2;
+	color: #FFF;
+	text-align: center;
+	text-decoration: none;
+	height:14px;
+	}
+
+#sddm li a:hover
+{	background: #49A3FF}
+
+#sddm div
+{	position: absolute;
+	visibility: hidden;
+	margin: 0;
+	padding: 0;
+	background: #EAEBD8;
+	border: 0px solid #5970B2;
+	height:14px;
+	}
+
+	#sddm div a
+	{	position: relative;
+		display: block;
+		margin: 0;
+		padding: 5px 10px;
+		width: auto;
+		white-space: nowrap;
+		text-align: center;
+		text-decoration: none;
+		background: #EAEBD8;
+		color: #2875DE;
+		font: 12px arial;
+		height:14px;}
+
+	#sddm div a:hover
+	{	background: #49A3FF;
+		color: #FFF}
