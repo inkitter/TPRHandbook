@@ -14,83 +14,102 @@ if (typeof(jQuery)=="undefined")
 //判断jQuery是否加载
 
 
-var boarddiv = "<div class=tooltip id=tooltipwindow>loading..</div>"; 
-var gtip="<div class=gtip2 id=gtw>ggg</div>"; 
-$(window).load(function(){
-	$(document.body).append(boarddiv); 
-	$(document.body).append(gtip); 
-	$("#gtw").load("00_index.htm #sddm");
-
-});
-$("#tooltipwindow").hide();
-
-//创建Div并隐藏
-
-
-$(document).ready(
+	
+$(window).load(
 	function()
 	{
-		$("span").mousemove(
-			function(e)
-			{
-				var sname=event.srcElement.innerText;
-				var stype=event.srcElement.className;
-				
-				if (sname.substr(0)=="[", sname.substr(sname.length-1)=="]")
-				{
-					sname=cutstr(sname,"[","]");
-				}
-				//判断有无[]并获取内容
-				floadtxt(sname,stype);		
-				
-				if  (e.clientX+300>window.innerWidth)
-				{
-					$("#tooltipwindow").css({left:e.clientX-$("#tooltipwindow").width()-20});
-				}
-				else
-				{
-					$("#tooltipwindow").css({left:e.clientX+5});
-				}
-				if  (e.clientY+$("#tooltipwindow").height()>window.innerHeight)
-				{
-					$("#tooltipwindow").css({top:e.pageY-$("#tooltipwindow").height()-20});
-				}
-				else
-				{
-					$("#tooltipwindow").css({top:e.pageY+5});
-				}
-				//防止弹出框超出窗口
-				
-			}//鼠标移动查询并显示
-		)
-		$("span").mouseout(	
-			function()
-			{
-				$("#tooltipwindow").hide();
-				$("#tooltipwindow").html("");
-			}		//鼠标移出隐藏提示
-		)
+		var boarddiv = "<div class=tooltip id=tooltipwindow>loading..</div>"; 
+		var gtip="<div class=gtip2 id=gtw>ggg</div>"; 
+		$(document.body).append(boarddiv); 
+		$(document.body).append(gtip); 
+		$("#gtw").load("00_index.htm #sddm");
+		$("#tooltipwindow").hide();	
 	}
 )
 
+	//创建Div并隐藏
+
+
+$(document).ready(function()
+{
+	$("span").mousemove(function(e)
+	{
+		var sname=event.srcElement.innerText;
+		var stype=event.srcElement.className;
+				
+		if (sname.substr(0)=="[", sname.substr(sname.length-1)=="]")
+		{
+			sname=cutstr(sname,"[","]");
+		}
+		//判断有无[]并获取内容
+		floadtxt(sname,stype);		
+			
+		if  (e.clientX+300>window.innerWidth)
+		{
+			$("#tooltipwindow").css({left:e.clientX-$("#tooltipwindow").width()-20});
+		}
+		else
+		{
+			$("#tooltipwindow").css({left:e.clientX+5});
+		}
+		if  (e.clientY+$("#tooltipwindow").height()>window.innerHeight)
+		{
+			$("#tooltipwindow").css({top:e.pageY-$("#tooltipwindow").height()-20});
+		}
+		else
+		{
+			$("#tooltipwindow").css({top:e.pageY+5});
+		}
+			//防止弹出框超出窗口
+	})
+	//鼠标移动查询并显示
+	
+	$("span").mouseout(function()
+	{
+		$("#tooltipwindow").hide();
+		$("#tooltipwindow").html("");
+	})
+	//鼠标移出隐藏提示
+	
+})
+
+function fdistype(sname,stype)
+{
+
+	return typefile;
+}
 
 function floadtxt(sname,stype)		//读取数据库
 {
-	var sout="";
-	var typefile="";
+	var sout="";			//查询到的数据字符串
+	var typefile="";		//文件名与路径
 	var filepath="";
-	filepath="";
+	var ftype="";		//记录json文件类别
+	filepath="";		//自定义json路径
 	switch (stype)
 	{
 		case "abEat":
 		{
 			typefile=filepath+"json_eat.json";
+			ftype="药品";
+			break;
+		}
+		case "abImportant":
+		{
+			typefile=filepath+"json_zhuangbei.json";
+			ftype="任务物品";
+			break;
+		}
+		case "abTianShu":
+		{
+			typefile=filepath+"json_zhuangbei.json";
+			ftype="天书";
 			break;
 		}
 		case "abZhuangBei":
-//		case "abImportant":
 		{
 			typefile=filepath+"json_zhuangbei.json";
+			ftype="装备";
 			break;
 		}
 		case "aaNeiGong":
@@ -102,6 +121,7 @@ function floadtxt(sname,stype)		//读取数据库
 		case "aaAnDu":
 		{
 			typefile=filepath+"json_wugong.json";
+			ftype="武功";
 			break;
 		}
 		case "abNeiGong":
@@ -112,46 +132,217 @@ function floadtxt(sname,stype)		//读取数据库
 		case "abZhiTui":
 		case "abAnDu":
 		{
-			typefile=filepath+"json_miji.json";
+			typefile=filepath+"json_wugong.json";
+			ftype="秘籍";
+			break;
+		}
+		case "aaTianFu":
+		{
+			typefile=filepath+"json_tianfu.json";
+			ftype="天赋";
+			break;
+		}
+		case "aaChengHao":
+		{
+			typefile=filepath+"json_chenghao.json";
+			ftype="称号";
 			break;
 		}
 		default:
 		{
 			typefile=filepath+"json_zhuangbei.json";
 			sout="notype";
+			ftype="无类别";
 			break;
 		}
-		//根据类型定义文件
-		
-	}
-$(document).ready(function() { 
-	$.getJSON(typefile)
-		.done(function(sdata){
-			$.each(sdata,function(k,v){
-				$.each(v,function(kk,vv){
-					if (vv==sname){$.each(v,function(kkk,vvv){if (vvv != 0)		if (vvv !="")		sout = sout+ kkk+": <span class=&quot"+stype+"&quot>"+vvv+"</span>"+"<br/>";	})	}
-				})
-			})				//历遍查找
+	}	//根据类型定义文件
+	
+	$(document).ready(function() { 
+		$.getJSON(typefile)
+			.done(
+				function(sdata)
+				{
+					$.each(
+						sdata,
+						function(k,v)
+						{
+							$.each(
+								v,
+								function(kk,vv)
+								{
+									switch(ftype)
+									{
+										case  "药品":
+										case "装备":
+										{
+											if (kk=="物品名称")
+											{
+												if (vv==sname)
+												{
+													$.each(
+														v,
+														function(kkk,vvv)
+														{
+															if (vvv != 0)		if (vvv !="")		sout = sout+ fsoutadd(kkk,vvv,stype);	
+														}
+													)
+												}	//if(vv=sname)
+											}
+											break;
+										}	//case 药品 装备
+										
+										case  "武功":
+										{
+											var vfound=false;
+											switch(kk)
+											{
+												case "名称":
+												{
+													if (vv==sname)
+													{
+														$.each(
+															v,
+															function(kkk,vvv)
+															{
+																if (vvv != 0)		if (vvv !="")		sout = sout+ fsoutadd(kkk,vvv,stype);	
+															}
+														)
+													}	//if(vv=sname)
+													if (!sout)  vfound=true;
+													break;
+												}
 
-			if (sout=="")
-			{
-				$("#tooltipwindow").html("查询："+sname+"<br/>"+"未找到");
-				$("#tooltipwindow").show();
-				//$("#tooltipwindow").hide();
-			}		//未找到显示提示或隐藏提示
-			else
-			{
-				$("#tooltipwindow").html("查询："+sname+"<br/>"+sout);
-				$("#tooltipwindow").show();
-			}		//找到数据显示提示
-			if (sout=="notype") $("#tooltipwindow").hide();
-		})
-		.fail(function(){
-			sout=sout+"查询失败";
-			$("#tooltipwindow").html("查询："+sname+"<br/>"+sout);
-			$("#tooltipwindow").show();
-		})
-})
+												case "物品名称":
+												{
+													if (vv==sname && vfound==false)
+													{
+														$.each(
+															v,
+															function(kkk,vvv)
+															{
+																if (vvv != 0)		if (vvv !="")		sout = sout+ fsoutadd(kkk,vvv,stype);	
+															}
+														)
+													}	//if(vv=sname)
+													if (!sout)  vfound=true;
+													break;
+												}
+											}
+											break;
+										}	//case 武功
+										
+										case  "秘籍":
+										{
+											switch(kk)
+											{
+												case "物品名称":
+												{
+													if (vv==sname)
+													{
+														$.each(
+															v,
+															function(kkk,vvv)
+															{
+																if (vvv != 0)		if (vvv !="")		sout = sout+ fsoutadd(kkk,vvv,stype);	
+															}
+														)
+													}	//if(vv=sname)
+												}
+											}
+											break;
+										}	//case 秘籍
+										
+										case  "天赋":
+										case "称号":
+										{
+											if (kk=="名称")
+											{
+												if (vv==sname)
+												{
+													$.each(
+														v,
+														function(kkk,vvv)
+														{
+															if (vvv != 0)		if (vvv !="")		sout = sout+ fsoutadd(kkk,vvv,stype);	
+														}
+													)
+												}	//if(vv=sname)
+											}
+											break;
+										}	//case 天赋 称号
+										
+										default:
+										{
+											if (vv==sname)
+											{
+												$.each(
+													v,
+													function(kkk,vvv)
+													{
+														if (vvv != 0)		if (vvv !="")		sout = sout+ fsoutadd(kkk,vvv,stype);	
+													}
+												)
+											}	//if(vv=sname)
+										}	//case default
+											break;
+									}
+								}	//function(kk,vv)
+							)
+						}	//function(k,v)
+					)
+					//历遍查找
+					var perstring="查询：<b style='font-size:10px;'>["+ftype+"]</b>"+"<span class='"+stype+"' style='font-size:12px;'>"+sname+"</span><br/>";
+					switch (sout)
+					{
+						case "":
+						{
+							switch(ftype)
+							{
+								case "任务物品":
+								case "天书":
+								{
+									$("#tooltipwindow").html(perstring+sout);
+									break;
+								}
+								default:
+								{
+									$("#tooltipwindow").html(perstring+"未找到");
+									break;
+								}
+							}
+							$("#tooltipwindow").show();
+							break;
+						}
+						case "notype":
+						{
+							$("#tooltipwindow").html(perstring+"数据库无此类别");
+							$("#tooltipwindow").show();
+							break;
+						}
+						default:
+						{
+							$("#tooltipwindow").html(perstring+sout);
+							$("#tooltipwindow").show();
+							break;
+						}
+					}
+				}	//function(sdata)
+			)   //.done
+			.fail(
+				function()
+				{
+					sout=sout+"<br/>查询失败";
+					$("#tooltipwindow").html("查询："+sname+"<br/>"+sout);
+					$("#tooltipwindow").show();
+				}	
+			)	//.fail
+	})
+}
+
+function fsoutadd(kkk,vvv,stype)
+{
+	var sout = kkk+":"+"<span class='"+stype+"' style='font-size:12px;'>"+vvv+"</span><br/>"
+	return sout;
 }
 
 function cutstr(text,start,end)

@@ -40,10 +40,10 @@ body {
 
 .aaQingGong,
 .abQingGong {
-	font-family:"微软雅黑";
-	font:bold;
-	font-size:16px;
-	color:#666;
+	font-family: "微软雅黑";
+	font: bold;
+	font-size: 16px;
+	color: #889A80;
 }
 
 .aaQuanZhang,
@@ -114,6 +114,7 @@ body {
 	color:#F99;
 }
 
+.aaChengHao
 .aaTianFu {
 	font-family:"微软雅黑";
 	font:bold;
@@ -173,17 +174,18 @@ body {
 	position: absolute;
 	overflow: hidden;
 	border: 1px solid #CCCCCC;
-	background-color: #C1FFFC;
+	background-color: #000000;
 	padding: 5px;
 	max-width: 300px;
-	opacity: 0.9;
+	opacity: 0.8;
 	font-family: "微软雅黑";
 	font-size: 10px;
-	text-align: left;s
+	text-align: left;
 	overflow-y: visible;
 	overflow-x: visible;
 	min-width: 150px;
-	line-height:14px;
+	line-height: 14px;
+	color: #FFFFFF;
 }
 
 .gtip2 {
