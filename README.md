@@ -16,7 +16,15 @@ V4.4
 使用csv to json转化数据格式。http://shancarter.github.io/mr-data-converter/  
 存为json文件。
 
-
+    if ((numInts / numRowsToTest) > threshold){
+        if (numFloats > 0) {
+          headerTypes[i] = "float"
+        } else {
+          headerTypes[i] = "int"
+      } else {
+        headerTypes[i] = "string"
+      }
+用js调试把CSVparser.js该代码段中float、int改为string强制转换为字符串类型。
 
 ### 脚本   
 在showtip.js中有代码段设定根据物品类别读取不同的json文件，查询并显示物品信息。  
