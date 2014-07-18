@@ -156,7 +156,7 @@ function floadtxt(sname,stype)		//读取数据库
 			break;
 		}
 	}	//根据类型定义文件
-	
+	var vfound=false;
 	$(document).ready(function() { 
 		$.getJSON(typefile)
 			.done(
@@ -193,7 +193,7 @@ function floadtxt(sname,stype)		//读取数据库
 										
 										case  "武功":
 										{
-											var vfound=false;
+											
 											switch(kk)
 											{
 												case "名称":
@@ -208,7 +208,8 @@ function floadtxt(sname,stype)		//读取数据库
 															}
 														)
 													}	//if(vv=sname)
-													if (!sout)  vfound=true;
+													if (sout!="")  vfound=true;
+													else vfound=false;
 													break;
 												}
 
@@ -223,8 +224,10 @@ function floadtxt(sname,stype)		//读取数据库
 																if (vvv != 0)		if (vvv !="")		sout = sout+ fsoutadd(kkk,vvv,stype);	
 															}
 														)
+														if (sout!="")  {vfound=true;ftype="秘籍";}
+														else vfound=false;
+														
 													}	//if(vv=sname)
-													if (!sout)  vfound=true;
 													break;
 												}
 											}
@@ -237,7 +240,7 @@ function floadtxt(sname,stype)		//读取数据库
 											{
 												case "物品名称":
 												{
-													if (vv==sname)
+													if (vv==sname&& vfound==false)
 													{
 														$.each(
 															v,
