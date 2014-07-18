@@ -1,6 +1,4 @@
-TPRHandbook
-===========
-金书红颜录攻略
+TPRHandbook-金书红颜录攻略
 ----
 ## V4.4
 
