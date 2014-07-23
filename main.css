@@ -158,6 +158,15 @@ body {
 	font:bold;
 }
 
+.aname{
+	
+}
+
+.acombatChar {
+	text-decoration:underline;
+	font:bold;
+}  
+
 .abTianShu {
 	font-family:"微软雅黑";
 	font:bold;

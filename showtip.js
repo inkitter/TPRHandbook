@@ -148,6 +148,32 @@ function floadtxt(sname,stype)		//读取数据库
 			ftype="称号";
 			break;
 		}
+		case "acombatChar":
+		case "bname":
+		case "aname":
+		{
+			typefile=filepath+"json_renwu.json";
+			ftype="人物";
+			break;
+		}
+//		case "acombat":
+//		{
+//			typefile=filepath+"json_renwu.json";
+//			ftype="战斗";
+//			break;
+//		}
+		case "bstress":
+		case "bstressred":
+		case "bstressredd":
+		case "acstatchange":
+		case "acRuDui":
+		case "acombat":
+		{
+			typefile=filepath+"json_zhuangbei.json";
+			sout="hide";
+			ftype="hide";
+			break;
+		}
 		default:
 		{
 			typefile=filepath+"json_zhuangbei.json";
@@ -157,6 +183,7 @@ function floadtxt(sname,stype)		//读取数据库
 		}
 	}	//根据类型定义文件
 	var vfound=false;
+	var perstring="";
 	$(document).ready(function() { 
 		$.getJSON(typefile)
 			.done(
@@ -274,6 +301,25 @@ function floadtxt(sname,stype)		//读取数据库
 											break;
 										}	//case 天赋 称号
 										
+										case "人物":
+										case "战斗":
+										{
+											if (kk=="姓名")
+											{
+												if (vv==sname)
+												{
+													$.each(
+														v,
+														function(kkk,vvv)
+														{
+															if (vvv != 0)		if (vvv !="")		sout = sout+ fsoutadd(kkk,vvv,stype);	
+														}
+													)
+												}	//if(vv=sname)
+											}
+											break;
+										}	// case 人物
+										
 										default:
 										{
 											if (vv==sname)
@@ -294,7 +340,7 @@ function floadtxt(sname,stype)		//读取数据库
 						}	//function(k,v)
 					)
 					//历遍查找
-					var perstring="查询：<b style='font-size:10px;'>["+ftype+"]</b>"+"<span class='"+stype+"' style='font-size:12px;'>"+sname+"</span><br/>";
+					perstring="查询：<b style='font-size:10px;'>["+ftype+"]</b>"+"<span class='"+stype+"' style='font-size:12px;'>"+sname+"</span><br/>";
 					switch (sout)
 					{
 						case "":
@@ -312,6 +358,7 @@ function floadtxt(sname,stype)		//读取数据库
 									$("#tooltipwindow").html(perstring+"未找到");
 									break;
 								}
+								
 							}
 							$("#tooltipwindow").show();
 							break;
@@ -320,6 +367,11 @@ function floadtxt(sname,stype)		//读取数据库
 						{
 							$("#tooltipwindow").html(perstring+"数据库无此类别");
 							$("#tooltipwindow").show();
+							break;
+						}
+						case "hide":
+						{
+							$("#tooltipwindow").hide();
 							break;
 						}
 						default:
@@ -334,8 +386,9 @@ function floadtxt(sname,stype)		//读取数据库
 			.fail(
 				function()
 				{
+					perstring="查询：<b style='font-size:10px;'>["+ftype+"]</b>"+"<span class='"+stype+"' style='font-size:12px;'>"+sname+"</span><br/>";
 					sout=sout+"<br/>查询失败";
-					$("#tooltipwindow").html("查询："+sname+"<br/>"+sout);
+					$("#tooltipwindow").html(perstring+sout);
 					$("#tooltipwindow").show();
 				}	
 			)	//.fail
