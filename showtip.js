@@ -32,21 +32,21 @@ $(window).load(
 
 $(document).ready(function()
 {
-	$("span").mousemove(function(e)
+	$("span").mouseenter(function(e)
 	{
 		var sname=event.srcElement.innerText;
 		var stype=event.srcElement.className;
-				
+			
 		if (sname.substr(0)=="[", sname.substr(sname.length-1)=="]")
 		{
 			sname=cutstr(sname,"[","]");
 		}
-		//判断有无[]并获取内容
+		//判断有无 [ ] 并获取内容
 		floadtxt(sname,stype);		
 			
 		if  (e.clientX+300>window.innerWidth)
 		{
-			$("#tooltipwindow").css({left:e.clientX-$("#tooltipwindow").width()-20});
+			$("#tooltipwindow").css({left:e.clientX-$("#tooltipwindow").width()-14});
 		}
 		else
 		{
@@ -54,7 +54,7 @@ $(document).ready(function()
 		}
 		if  (e.clientY+$("#tooltipwindow").height()>window.innerHeight)
 		{
-			$("#tooltipwindow").css({top:e.pageY-$("#tooltipwindow").height()-20});
+			$("#tooltipwindow").css({top:e.pageY-$("#tooltipwindow").height()-16});
 		}
 		else
 		{
@@ -63,12 +63,35 @@ $(document).ready(function()
 			//防止弹出框超出窗口
 	})
 	//鼠标移动查询并显示
-	
-	$("span").mouseout(function()
-	{
-		$("#tooltipwindow").hide();
-		$("#tooltipwindow").html("");
+	$("span").mousemove(function(e)
+	{	
+		if  (e.clientX+300>window.innerWidth)
+		{
+			$("#tooltipwindow").css({left:e.clientX-$("#tooltipwindow").width()-14});
+		}
+		else
+		{
+			$("#tooltipwindow").css({left:e.clientX+2});
+		}
+		if  (e.clientY+$("#tooltipwindow").height()>window.innerHeight)
+		{
+			$("#tooltipwindow").css({top:e.pageY-$("#tooltipwindow").height()-16});
+		}
+		else
+		{
+			$("#tooltipwindow").css({top:e.pageY+2});
+		}
+			//防止弹出框超出窗口
 	})
+	//鼠标移动查询并显示
+	
+	document.onmouseover = function(e){
+    	var el = e.srcElement || e.target;
+		//$("#tooltipwindow").text(el.tagName);
+		if (el.id !="tooltipwindow" && el.tagName != "SPAN" && el.tagName != "DIV") {
+			$("#tooltipwindow").hide();
+		}
+	}
 	//鼠标移出隐藏提示
 	
 })
