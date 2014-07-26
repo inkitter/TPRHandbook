@@ -8,13 +8,13 @@ body {
 	font-family:"宋体";
 	line-height:20px;
 	
-}
+}/*总体样式*/
 
 .titlecss {
 	font-family:"黑体";
 	font:bold;
 	font-size:24px;
-}
+}/*标题样式*/
 
 .aaa {
 	font-size:14px;
@@ -36,7 +36,7 @@ body {
 	font:bold;
 	font-size:16px;
 	color:#9CF;
-}
+}  
 
 .aaQingGong,
 .abQingGong {
@@ -137,7 +137,7 @@ body {
 	font:bold;
 	font-size:12px;
 	color:#F00;
-}
+}/*括号红字小*/
 
 .bname {
 	color:#F3F;
@@ -146,26 +146,26 @@ body {
 .bplace {
 	font:bold;
 	color:#F00;
-}
+}/*地点名称*/
 
 .acstatchange {
 	font:bold;
 	color:#66C;
-}
+}/*人物状态变化*/
 
 .acombat {
 	text-decoration:underline;
 	font:bold;
-}
+}/*战斗*/
 
 .aname{
 	
-}
+}/*无修改样式的人物类别标签，查询用*/
 
 .acombatChar {
 	text-decoration:underline;
 	font:bold;
-}  
+}  /*战斗的人物标签*/
 
 .abTianShu {
 	font-family:"微软雅黑";
@@ -177,7 +177,7 @@ body {
 .acRuDui {
 	font:bold;
 	color:#639;
-}
+}/*队友入队*/
 
 .tooltip {
 	position: absolute;
@@ -196,7 +196,7 @@ body {
 	line-height: 14px;
 	color: #FFFFFF;
 	max-height: 300px;
-}
+}/*鼠标提示框样式*/
 
 .gtip2 {
 	position: fixed;
@@ -208,6 +208,8 @@ body {
 	opacity: 0.8;
 }
 
+/*以下为导航栏部分*/
+/*=========================================*/
 #sddm
 {
 	margin: 0 auto;
@@ -269,3 +271,4 @@ body {
 	#sddm div a:hover
 	{	background: #49A3FF;
 		color: #FFF}
+/*============================================*/
