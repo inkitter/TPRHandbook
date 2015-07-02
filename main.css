@@ -9,11 +9,12 @@ body {
 	line-height:20px;
 	
 }/*总体样式*/
-.abImportant {
-}
-.abImportant {
-}
-
+p {
+	font-size:16px;
+	font-family:"宋体";
+	line-height:20px;
+	
+}/*总体样式*/
 
 .titlecss {
 	font-family:"黑体";
