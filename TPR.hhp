@@ -1,109 +1,45 @@
 [OPTIONS]
 Compatibility=1.1 or later
-Compiled file=..\CHM\TPR.chm
+Compiled file=TPR.chm
 Contents file=TPR.hhc
-Default topic=00_intro.htm
+Default Window=金书红颜录
+Default topic=index.htm
 Display compile progress=Yes
 Full-text search=Yes
 Language=0x804 中文(简体，中国)
-Title=TPR4
+Title=TPR5
+
+[WINDOWS]
+金书红颜录=,"TPR.hhc",,"index.htm","03_story00zj.htm",,,,,0x2520,,0x3006,,,,,,,,0
 
 
 [FILES]
-00_index.htm
-00_intro.htm
-00_intro2.htm
-01_help00.htm
-01_help01.htm
-01_help02.htm
-01_help03.htm
-01_help04.htm
-01_help05.htm
-01_help06.htm
-01_help07.htm
-01_help08.htm
-01_help09.htm
-01_help10.htm
-01_help11.htm
-01_help12.htm
-02_stat01.htm
-02_stat02.htm
-02_stat03.htm
-02_stat04.htm
-02_stat05.htm
-02_stat06.htm
-03_story00.htm
+index.htm
 03_story00zj.htm
-03_story01FX0.htm
 03_story01FXA.htm
 03_story01FXB.htm
-03_story01FXX.htm
-03_story03L0.htm
-03_story03L1.htm
-03_story03LA.htm
-03_story03LB.htm
-03_story03LC.htm
-03_story03LX.htm
-03_story04T0.htm
+03_story03L.htm
 03_story04T1.htm
 03_story04T2.htm
 03_story04T3.htm
-03_story04T4_0.htm
-03_story04T4_A.htm
-03_story04T4_B.htm
-03_story04TX.htm
+03_story04T4.htm
 03_story05S0.htm
-03_story05S1.htm
-03_story05SA.htm
-03_story05SB.htm
-03_story05SX.htm
 03_story06B0.htm
-03_story06BA.htm
-03_story06BB.htm
-03_story06BX.htm
 03_story07L0.htm
-03_story07L1.htm
 03_story07LA.htm
 03_story07LB.htm
-03_story07LX.htm
 03_story08X0.htm
 03_story08XA.htm
 03_story08XB.htm
-03_story08XX.htm
 03_story09S0.htm
-03_story09SA.htm
-03_story09SB.htm
-03_story09SX.htm
 03_story10S0.htm
-03_story10SA.htm
-03_story10SB.htm
-03_story10SX.htm
 03_story11X0.htm
-03_story11XA.htm
-03_story11XB.htm
-03_story11XX.htm
-03_story12Y0.htm
 03_story12YA.htm
 03_story12YB.htm
 03_story12YC.htm
-03_story12YX.htm
 03_story13B0.htm
-03_story13B1.htm
-03_story13BA.htm
-03_story13BB.htm
-03_story13BX.htm
 03_story14Y0.htm
-04_00WG.htm
-04_01zj.htm
-04_02wyy.htm
-04_03LSdy.htm
-08_Edit.htm
-08_Log.htm
-02_stat07.htm
 03_story15N0.htm
-json_eat.json
-json_wugong.json
-json_zhuangbei.json
 
 [INFOTYPES]
 
