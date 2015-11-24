@@ -10,7 +10,7 @@ Language=0x804 中文(简体，中国)
 Title=TPR5
 
 [WINDOWS]
-金书红颜录=,"TPR.hhc",,"index.htm","03_story00zj.htm",,,,,0x2520,,0x3006,,,,,,,,0
+金书红颜录=,"TPR.hhc",,"index.htm","index.htm",,,,,0x42520,,0x6,[593,79,1466,1019],,,,,,,0
 
 
 [FILES]
@@ -40,6 +40,7 @@ index.htm
 03_story13B0.htm
 03_story14Y0.htm
 03_story15N0.htm
+shop.htm
 
 [INFOTYPES]
 

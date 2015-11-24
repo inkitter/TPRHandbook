@@ -112,5 +112,9 @@
 		<param name="Name" value="Ô½Å®½£">
 		<param name="Local" value="03_story15N0.htm">
 		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="µêÆÌÂô»õ">
+		<param name="Local" value="shop.htm">
+		</OBJECT>
 </UL>
 </BODY></HTML>
