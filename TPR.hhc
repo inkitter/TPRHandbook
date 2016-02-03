@@ -77,8 +77,12 @@
 		<param name="Local" value="03_story08XB.htm">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
-		<param name="Name" value="书-风啸沙雪篇">
-		<param name="Local" value="03_story09S0.htm">
+		<param name="Name" value="书-霍青桐线">
+		<param name="Local" value="03_story09SA.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="书-李阮芷线">
+		<param name="Local" value="03_story09SB.htm">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="神雕侠侣">
@@ -114,7 +118,11 @@
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="店铺卖货">
-		<param name="Local" value="shop.htm">
+		<param name="Local" value="04_shop.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="洗武功整理">
+		<param name="Local" value="04_WuGong.htm">
 		</OBJECT>
 </UL>
 </BODY></HTML>
